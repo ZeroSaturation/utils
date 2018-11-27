@@ -14,4 +14,4 @@ Vue.use(utils);
 ```javascript
 import utils from './utils'
 
-Vue.$utils = utils();
+Vue.prototype.$utils = utils();
