@@ -5,7 +5,7 @@ function getQuery(obj = null) {
   if(obj && obj.constructor === Object){
     let arr = [];
     Object.keys(obj).forEach(key => {
-      arr.push(`${key}=${obj[key]}`);
+      arr.push(`${key}=${encodeURIComponent(obj[key])}`);
     })
     return '?' + arr.join('&');
   }else {
